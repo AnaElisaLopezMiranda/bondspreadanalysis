@@ -11,3 +11,29 @@ number-sections: true
 bibliography: references.bib
 fig-cap-location: bottom
 ---
+
+# Introduction {#sec-intro} 
+## Description of variables
+## Statement of hypothesis/research question
+
+# Literature Review {#sec-lit}
+
+# Descriptive {#sec-des}
+## Tables
+## Plots
+## Summary of key variables
+
+# Methodology {#sec-met}
+## Clear statement of the model and its assumptions
+## Specification tests
+## Robustness considerations 
+
+# Hypothesis Testing {#sec-hyp}
+## Choise of appropriate test
+
+testing hi this is normal text.
+
+
+# Results {#sec-res}
+## Correct interpretation of results
+## Economic intuition provided
