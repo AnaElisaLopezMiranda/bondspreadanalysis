@@ -1,7 +1,13 @@
 ---
-title: "Bondspreadanalysis"
+title: "ECO375"
+author: 
+  - name: Ana Elisa Lopez-Miranda and Nipun Jaiswal
+date: today
+date-format: long
+format: pdf
+execute:
+    echo: false
+number-sections: true
+bibliography: references.bib
+fig-cap-location: bottom
 ---
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
