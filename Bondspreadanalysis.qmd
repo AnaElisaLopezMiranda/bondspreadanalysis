@@ -20,25 +20,18 @@ fig-cap-location: bottom
 
 # Introduction {#sec-intro} 
 
+Finding the micro-determinants for credit bonds is useful for finding what affects yields over time. 
 
-
-
+Yield is described as the difference in 
 
 This paper is structured as follows: @sec-lit is the literature review situating the research question, @sec-des contains the preliminary analyses, @sec-met contains the methodology, @sec-res contains the results, and @sec-hyp has the hypothesis testing. 
 
-
-Higher spread = higher perceived risk
-
 # Firm value and capital structure ratios
 
-Enterprise Value = Market Cap + Total Debt - Cash
-EVtoSales measures how expensive a company is relative to its revnue 
-High EV/Sales -> market expects high growth OR company is overvalued
-High EV -> lower PERCEIVED risk -> lower spreads
+Enterprise value to sales measures how expensive a company is relative to its revenue. Thus, a high ratio means the market expects high growth (or the company is overvalued). 
+Thus, a high enterprise value to sales means lower perceived risk and lower spreads.
 
-PPE is actual long-term assets (machines, buildings, equipment)
-High EV/PPE -> growth-oriented
-High EV/PPE -> riskier -> higher spreads
+PPE is actual long-term assets (machines, buildings, equipment). Thus, a high enterprise value to PPE means the firm is growth-oriente, but that also means it is riskier and higher spreads. 
 
 High P/S -> confidence -> lower spreads
 
@@ -84,19 +77,6 @@ years to maturity -> more interest rate and credit risk -> higher spread (risk p
 low couponds -> high price sensitity? MAYBE. Higher does not not imply higher here
 
 
-
-SLR assumptions:
-linearity in parameters
-Random sampling
-no perfect colllnearity
-Zero conditional mean
-Homoskedasticity
-(1-4) unbiased ness 
-add 5 to get BLUE
-6 is normality
-
-
-
 difference in percentages: basis points
 
 
@@ -127,35 +107,13 @@ The variables are as follows
 | Years to Maturity | Number of years until the bond pays back its principal |
 | Coupon | Annual payments made to bond holders |
 
-Spread is numeric with a range from [-196.8, 395.8]. It had a mean of -14.6 and a standard deviation of 57.6. It had skweness of 1.017
-
-PricetoBook Value is numeric with a range from [-10.3, 7.1]. It had a mean of 0.214 and a standard deviation of 1.17. It had skewness of 0.106.
-
-Return on Average total equity was numeric with a range [-90.96, 135.03]. It had a mean of -0.47 and a standard deviation of 19.466. It had a skweness of 1.236.
-
-Current Ratio is numeric with a range from [-1.47, 3.27]. It had a mean of -0.14 and a standard deviation of 0.395. It had a skewness of 2.86.
-
 
 ## Statement of hypothesis/research question
 
-The research question this paper will seek to answer is what are the micro determinants of credit spread. We propose the following model 
-
-$y= \beta_{0}+\beta_{1}x_1+\beta_{2}x_2$
-
-Where $y$ is the spread of bonds, $x_1$ is ...
+The research question this paper will seek to answer is what are the micro-determinants of credit spread. We propose that total debt to equity, price to book value, return on average total equity, and current ratioare the micro-determinants affect the change in bond spreads over time.
 
 
 # Literature Review {#sec-lit}
-do now
-"For banks, credit spread can be an indicator of the profitability or risk premium related to a lender providing a loan to an individual borrower. The credit spread accounts for the maturity, liquidity, credit risk, and creditworthiness of borrowers. In this study, credit spread is defined as the difference between the loan rate and risk-free rate." [@u2021investigating]
-
-@collin2001determinants:
-book value (more leverage -> higher spreads)
-
-"Hence, it is clear that credit spreads are expected to increase with leverage. Likewise, credit spreads should be a decreasing function of the firm's return on equity, all else equal." @collin2001determinants
-
-"Implied volatility smiles in observed option prices suggest that markets account for the probability of large negative jumps in firm value. Thus, increases in either the probability or the magnitude of a negative jump should increase credit spreads."@collin2001determinants
-
 
 Total Debt to Equity + Total Debt to Total Capital @fu2021credit
 "we assess the existence of a firm leverage effect"
@@ -178,23 +136,87 @@ Years to maturity (loan maturity) “…a firm is defined as a combination of th
 [@collin2001determinants] added total debt to equity and enterprice valuue to sales.
 
 # Descriptive {#sec-des}
-## Tables
 ## Plots
 
-![](spreadvscurrentratio.png)
-![](spreadvspricetobookvalue.png)
-![](spreadvsretrnavgtotalequitycubed.png)
+
+![](spreadvscurrentratio.png){width=50%} 
+![](spreadvspricetobookvalue.png){width=50%}
+
+![](spreadvslogreturnavgtotalequity.png){width=50%}
+![](spreadvslogtotaldebttoequity.png){width=50%}
 
 ## Summary of key variables
 
+Spread is numeric with a range from [-196.8, 395.8]. It had a mean of -14.6 and a standard deviation of 57.6. It had skweness of 1.017
+
+PricetoBook Value is numeric with a range from [-10.3, 7.1]. It had a mean of 0.214 and a standard deviation of 1.17. It had skewness of 0.106.
+
+Return on Average total equity was numeric with a range [-90.96, 135.03]. It had a mean of -0.47 and a standard deviation of 19.466. It had a skweness of 1.236.
+
+Current Ratio is numeric with a range from [-1.47, 3.27]. It had a mean of -0.14 and a standard deviation of 0.395. It had a skewness of 2.86.
+
+Total Debt to Equity is numeric with range from [-80.36, 452.69]. It had a mean of 30.07 and a standard deviation of 39.65. It had a skewness of 39.65. 
+
 # Methodology {#sec-met}
 ## Clear statement of the model and its assumptions
+
+$$
+y= \beta_{0}+\beta_{1}log(x_1)+\beta_{2}x_2 + \beta_{3}log(x_3)+\beta_{4}x_4
+$$
+
+Where $y$ is the spread of bonds, $x_1$ is TotalDebttoEquity, $x_2$ is PricetoBookValue, $x_3$ to ReturnonAvgTotalEquity, and $x_4$ is CurrentRatio.
+
+**Linearity in Parameters**
+
+From the model above, it is clear that the model is linear in parameters. 
+
+**Random Sampling** 
+
+This is an assumption about the data given. It is randomly sampled. 
+
+**No Perfect Collinearity**
+
+We ran correlation between all the variables and got the following table. Since none of the columns are a repeat, there is no perfect collinearity.
+![](collinearity.png.png){width=50%, fig-align="center"}
+
+![](collinearityy.png){width=50%, fig-align="center"}
+**Zero Conditional Mean**
+
+This is an assumption about the population. 
+
+**Homoskedasticty**
+
+We performed robust on all our entries and did not assume homoskedasticity. 
+
+Thus, following all these assumptions, the model is consistent and unbiased
+
+![](twologstwolinear.png){width=50%, fig-align="center"}
+
 ## Specification tests
+
+Before Adjusting for non linearity: F(12,809) value for estat ovtest, rhs ( linearity test)  = 6.22 with p value 0.0000 
+
+After adjusting for non linearity (the model with logs and nooooo cubes) : estat ovtest, rhs F(12, 46) value is 1.46 with p-value 0.1749
+
+The estat ovtest (test for omitted variable bias) only run after adjusting for non linearity gave F(3,55) value 1.55 with p-value 0.2129
+
+
 ## Robustness considerations 
 
+For robustness considerations, we used robust every time we used regression. Thus, we never assumed homoskedasticity.
+
 # Hypothesis Testing {#sec-hyp}
+
+![](jointftest.png){width=50%, fig-align="center"}
+
+![](ttest1.png){width=50%, fig-align="center"}
+
+![](ttest2.png){width=50%, fig-align="center"}
+
+
 ## Choise of appropriate test
 
+We chose to do a joint f test to see whether any of the parameters should be 0. We also completed a t test to see individual significance against the yield. 
 
 # Results {#sec-res}
 ## Correct interpretation of results
