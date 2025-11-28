@@ -88,6 +88,8 @@ The research question this paper will seek to answer is what are the micro-deter
 
 # Literature Review {#sec-lit}
 
+In 2020, Fu et. al employed a multi-factor analysis from both a firm-specific and market-specific perspective to examine the determinants of credit spreads in the USA, the UK, and Japan between 2005 and 2012. Their results indicated that the degree of firm leverage has a siginificant influence on spreads. They mention re-testing the influence of leverage on spreads,  "as done in earlier work"
+
 Total Debt to Equity + Total Debt to Total Capital @fu2021credit
 "we assess the existence of a firm leverage effect"
 "firm leverage appears to have a significant influence"
@@ -133,10 +135,15 @@ Total Debt to Equity is numeric with range from [-80.36, 452.69]. It had a mean 
 ## Clear statement of the model and its assumptions
 
 $$
-y= \beta_{0}+\beta_{1}log(x_1)+\beta_{2}x_2 + \beta_{3}log(x_3)+\beta_{4}x_4
+\Delta y_i= \beta_{0}+\beta_{1}log(x_{i1})+\beta_{2}x_{i2} + \beta_{3}log(x_{i3})+\beta_{4}x_{i4}
 $$
 
-Where $y$ is the spread of bonds, $x_1$ is TotalDebttoEquity, $x_2$ is PricetoBookValue, $x_3$ to ReturnonAvgTotalEquity, and $x_4$ is CurrentRatio.
+Where $\Delta y$ is the difference in the spread of bonds from 2022 to 2024, 
+
+$x_1$ is the difference in Total Debt to Equity.
+$x_2$ is the difference in Price to Book Value.
+$x_3$ is the different in Return on Average Total Equity.
+$x_4$ is the difference in Current Ratio.
 
 **Linearity in Parameters**
 
