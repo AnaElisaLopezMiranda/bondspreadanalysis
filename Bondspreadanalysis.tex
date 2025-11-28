@@ -185,7 +185,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={On The Micro-Determinants of Credit Spreads},
+  pdftitle={The Micro-Determinants of Credit Spreads},
   pdfauthor={Nipun Jaiswal and Ana Elisa Lopez-Miranda; (1008726826) and (1008819879)},
   colorlinks=true,
   linkcolor={blue},
@@ -195,7 +195,7 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{On The Micro-Determinants of Credit Spreads}
+\title{The Micro-Determinants of Credit Spreads}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -215,82 +215,22 @@
 \section{Introduction}\label{sec-intro}
 
 Finding the micro-determinants for credit bonds is useful for finding
-what affects yields over time.
+what affects yields over time. The yield that investors require to
+purchase a firm's bond is the spread over the yield provided by a
+comparable government bond. Micro-determinants are variables taht are
+related to the probability of default and the liquidity associated with
+a specific bond issue. This project seaks to assess the importance of
+firm specific factors in determining the spread for its bonds. The data
+used covered two points in time: 2022 and 2024. The model is a
+cross-sectional problem focusing on the changes in spread from 2022 to
+2024. Fixed effects were not included as these were not vary across
+bonds.
 
 This paper is structured as follows: Section~\ref{sec-lit} is the
 literature review situating the research question, Section~\ref{sec-des}
 contains the preliminary analyses, Section~\ref{sec-met} contains the
 methodology, Section~\ref{sec-res} contains the results, and
 Section~\ref{sec-hyp} has the hypothesis testing.
-
-\section{Firm value and capital structure
-ratios}\label{firm-value-and-capital-structure-ratios}
-
-Enterprise Value = Market Cap + Total Debt - Cash Enterprise Value
-toSales measures how expensive a company is relative to its revnue High
-EV/Sales -\textgreater{} market expects high growth OR company is
-overvalued High EV -\textgreater{} lower PERCEIVED risk -\textgreater{}
-lower spreads
-
-PPE is actual long-term assets (machines, buildings, equipment) High
-EV/PPE -\textgreater{} growth-oriented High EV/PPE -\textgreater{}
-riskier -\textgreater{} higher spreads
-
-High P/S -\textgreater{} confidence -\textgreater{} lower spreads
-
-Book Value = Assets - Liabilities P/B \textless1 -\textgreater{}
-undervaluation -\textgreater{} financial distress -\textgreater{} higher
-spreads
-
-Dividend yield -\textgreater{} higher MAY indicate risk
-
-High RATE -\textgreater{} more efficient -\textgreater{} lower spreads
-
-\section{profitability and operational
-efficiency}\label{profitability-and-operational-efficiency}
-
-operating margin = earnings before interest and taxes/revenue high
-margin -\textgreater{} lower default risk (firm is efficient)
--\textgreater{} lower spreads
-
-High total capital expenses to total assets -\textgreater{} lower
-spreads or less cash :\\
-
-low book value per share -\textgreater{} maybe bankrupt
-
-High asset turnover -\textgreater{} efficient -\textgreater{} lower
-spreads
-
-\section{Liquidity and Cash flow
-ratios}\label{liquidity-and-cash-flow-ratios}
-
-current ratio = current assets (cash + receivables + inventory)/ current
-liabilities (obligations due) low current ratio -\textgreater{}
-liquidity risk -\textgreater{} higher spreads
-
-Cash dividend coverage ratio = operating cash flow/cash dividends paid
-lower coverage -\textgreater{} weak cash flow -\textgreater{} higher
-spreads
-
-\section{Leverage and Capital
-Structure}\label{leverage-and-capital-structure}
-
-high total debt/shareholder equity -\textgreater{} in debt
--\textgreater{} higher spreads
-
-high total debt/(total debt + equity) -\textgreater{} high reliance on
-debt -\textgreater{} high spreads
-
-\section{Bond specific}\label{bond-specific}
-
-Higher amount outstanding -\textgreater{} lower spreads (more liquid?)
-smaller amount outstanding -\textgreater{} higher spreads
-
-years to maturity -\textgreater{} more interest rate and credit risk
--\textgreater{} higher spread (risk premium)
-
-low couponds -\textgreater{} high price sensitity? MAYBE. Higher does
-not not imply higher here
 
 difference in percentages: basis points
 
@@ -315,32 +255,73 @@ Issuer & Name of the company that issued the bond \\
 Spread & The difference between the bond's yield and the yield on a
 government bond of the same maturity. Measured in bps \\
 Ticker Parent & Identifier for the parent company \\
-\textbf{Enterprise Value to Sales} & Measures how expensive a company is
-relative to its revenue \\
+Enterprise Value to Sales & Measures how expensive a company is relative
+to its revenue \\
 Enterprise Value to PPE & Measures valuation relative to tangible
 assets \\
-\textbf{Price to Sales} & How much investors pay for \$1 of revenue \\
-\textbf{Price to Book Value} & Measures how expensive the firm is
-relative to accounting equity \\
+Price to Sales & How much investors pay for \$1 of revenue \\
+Price to Book Value & Measures how expensive the firm is relative to
+accounting equity \\
 Dividend Yield & Return shareholders receive from dividends \\
-\textbf{Return on Average Total Equity} & How efficient the firm is with
+Return on Average Total Equity & How efficient the firm is with
 investments \\
-\textbf{Operating Margin} & Core profibility measure \\
+Operating Margin & Core profibility measure \\
 Total Capital Expenses to Total Assets & How much firm invests in
 long-term assets \\
 Book Value per Share & Accounting value per share \\
-\textbf{Asset Turnover} & Measures how well assets generate revenue \\
-\textbf{Current Ratio} & Measures short-term liquidity \\
-\textbf{Cash Dividend Coverage Ratio} & Measures if firm can pay
-dividends purely from operations \\
-\textbf{Total Debt to Equity} & Measures financial leverage \\
-\textbf{Total Debt to Total Capital} & Shows how much of capital is from
-debt \\
+Asset Turnover & Measures how well assets generate revenue \\
+Current Ratio & Measures short-term liquidity \\
+Cash Dividend Coverage Ratio & Measures if firm can pay dividends purely
+from operations \\
+Total Debt to Equity & Measures financial leverage \\
+Total Debt to Total Capital & Shows how much of capital is from debt \\
 Amount Outstanding & Size of the bond \\
 Years to Maturity & Number of years until the bond pays back its
 principal \\
 Coupon & Annual payments made to bond holders \\
 \end{longtable}
+
+Enterprise value to sales measures how expensive a company is relative
+to its revenue. Thus, a high ratio means the market expects high growth
+(or the company is overvalued). Thus, a high enterprise value to sales
+means lower perceived risk and lower spreads.
+
+PPE is tangible long-term assets. Thus, a high enterprise value to PPE
+means the firm is growth-oriented, but that also means has more risk and
+higher spreads.
+
+A high Price to Sales signifies higher confidence in the firm by the
+general public which indicates lower spreads.
+
+Price to Book Value is how the firm is valued by the general public. A
+lower ratio indicates undervaluation which produces financial distress
+and higher spreads.
+
+Divident yield is how much bond holders are receiving from the
+dividents. A higher ration may indicate higher risk.
+
+A higher Return on Average total equity indicates the firm is more
+efficient which means lower spreads.
+
+The operating margin shows how much earnings are received before
+interest and taxes. A higher margin indicates the firm has a lower risk
+of going default which means lower spreads.
+
+A high total capital expenses to total assets could indicate either
+lower spreads or a lack of liquidy.
+
+A low book value per share may indicate the firm is close to going
+default and thus have a higher spread. A high asset turnover indicates
+the efficiency which implies lower spreads
+
+A low current ratio indicates liquidity risk which implies higher
+spreads.
+
+A low cash dividend coverage ratio indicates weak cash flow which
+implies higher spreads
+
+A high total debt to equity means the firm has a high reliance on debt
+which implies higher spreads
 
 \subsection{Statement of hypothesis/research
 question}\label{statement-of-hypothesisresearch-question}
@@ -353,20 +334,28 @@ time.
 
 \section{Literature Review}\label{sec-lit}
 
-Total Debt to Equity + Total Debt to Total Capital
-(\textbf{fu2021credit?}) ``we assess the existence of a firm leverage
-effect'' ``firm leverage appears to have a significant influence''
+In 2020, Fu et. al employed a multi-factor analysis from both a
+firm-specific and market-specific perspective to examine the
+determinants of credit spreads in the USA, the UK, and Japan between
+2005 and 2012. Their results indicated that the degree of firm leverage
+has a siginificant influence on spreads. They mention re-testing the
+influence of leverage on spreads, ``as done in earlier work of
+Collin-Dufresne e''
 
-(\textbf{wang2023liquidity?}) ROE ``Return on net assets\ldots{} the
-higher the ROE, the better the operating conditions and the ability to
-service debt.'' higher -\textgreater{} lower spreads Current Ratio
-````The higher the current ratio, the better the ability to service
-debt\ldots the smaller the credit spread.''\,''
+Total Debt to Equity + Total Debt to Total Capital Fu, Li, and Molyneux
+(2021) ``we assess the existence of a firm leverage effect'' ``firm
+leverage appears to have a significant influence''
 
-(\textbf{kaviani2020policy?}) Operating Margin ````\ldots operating
+Wang (2023) ROE ``Return on net assets\ldots{} the higher the ROE, the
+better the operating conditions and the ability to service debt.''
+higher -\textgreater{} lower spreads Current Ratio ````The higher the
+current ratio, the better the ability to service debt\ldots the smaller
+the credit spread.''\,''
+
+Kaviani et al. (2020) Operating Margin ````\ldots operating
 income-to-sales ratio\ldots{}''
 
-(\textbf{carvalho2023loan?}) Price to book value (Market-to-book)
+Carvalho, Gao, and Ma (2023) Price to book value (Market-to-book)
 ````Borrower-level controls include Equity Volatility, Size, Firm Age,
 Profitability, Tangibility, Market-to-Book, Leverage, Rated.''\,''
 amount outstanding (loan amount) ``I define the net notional amount of
@@ -377,19 +366,14 @@ amount of protection sold\ldots{}'' Years to maturity (loan maturity)
 (e.g.~Ford) and a maturity bucket (e.g.~0-2 years)\ldots{} The maturity
 buckets I consider are (in years): 0-2, 2-4, 4-6, 6-8, 8-10, and 10+.''
 
-(Collin-Dufresn, Goldstein, and Martin 2001) added total debt to equity
-and enterprice valuue to sales.
-
 \section{Descriptive}\label{sec-des}
-
-\subsection{Tables}\label{tables}
 
 \subsection{Plots}\label{plots}
 
 \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{spreadvscurrentratio.png}
 \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{spreadvspricetobookvalue.png}
 
-\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{spreadvsretrnavgtotalequitycubed.png}
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{spreadvslogreturnavgtotalequity.png}
 \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{spreadvslogtotaldebttoequity.png}
 
 \subsection{Summary of key variables}\label{summary-of-key-variables}
@@ -419,12 +403,15 @@ of 39.65.
 assumptions}\label{clear-statement-of-the-model-and-its-assumptions}
 
 \[
-y= \beta_{0}+\beta_{1}log(x_1)+\beta_{2}x_2 + \beta_{3}log(x_3)+\beta_{4}x_4
+\Delta y_i= \beta_{0}+\beta_{1}log(x_{i1})+\beta_{2}x_{i2} + \beta_{3}log(x_{i3})+\beta_{4}x_{i4}
 \]
 
-Where \(y\) is the spread of bonds, \(x_1\) is TotalDebttoEquity,
-\(x_2\) is PricetoBookValue, \(x_3\) to ReturnonAvgTotalEquity, and
-\(x_4\) is CurrentRatio.
+Where \(\Delta y\) is the difference in the spread of bonds from 2022 to
+2024,
+
+\(x_1\) is the difference in Total Debt to Equity. \(x_2\) is the
+difference in Price to Book Value. \(x_3\) is the different in Return on
+Average Total Equity. \(x_4\) is the difference in Current Ratio.
 
 \textbf{Linearity in Parameters}
 
@@ -467,11 +454,11 @@ unbiased
 Before Adjusting for non linearity: F(12,809) value for estat ovtest,
 rhs ( linearity test) = 6.22 with p value 0.0000
 
-After adjusting for non linearity (the model with logs and cubes) :
-estat ovtest, rhs F(11, 559) value is 0.89 with p-value 0.5485
+After adjusting for non linearity (the model with logs and nooooo cubes)
+: estat ovtest, rhs F(12, 46) value is 1.46 with p-value 0.1749
 
 The estat ovtest (test for omitted variable bias) only run after
-adjusting for non linearity gave F(3,55) value 1.52 with p-value 0.2207
+adjusting for non linearity gave F(3,55) value 1.55 with p-value 0.2129
 
 \subsection{Robustness considerations}\label{robustness-considerations}
 
@@ -480,16 +467,24 @@ regression. Thus, we never assumed homoskedasticity.
 
 \section{Hypothesis Testing}\label{sec-hyp}
 
-We did not run t-test as we are not siginificance in just one variable
-as we started by using these specific variables based on economic
-initution.
-
 \begin{center}
 \pandocbounded{\includegraphics[keepaspectratio]{jointftest.png}}
 \end{center}
 
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{ttest1.png}}
+\end{center}
+
+\begin{center}
+\pandocbounded{\includegraphics[keepaspectratio]{ttest2.png}}
+\end{center}
+
 \subsection{Choise of appropriate
 test}\label{choise-of-appropriate-test}
+
+We chose to do a joint f test to see whether any of the parameters
+should be 0. We also completed a t test to see individual significance
+against the yield.
 
 \section{Results}\label{sec-res}
 
@@ -502,10 +497,25 @@ provided}\label{economic-intuition-provided}
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-collin2001determinants}
-Collin-Dufresn, Pierre, Robert S Goldstein, and J Spencer Martin. 2001.
-{``The Determinants of Credit Spread Changes.''} \emph{The Journal of
-Finance} 56 (6): 2177--207.
+\bibitem[\citeproctext]{ref-carvalho2023loan}
+Carvalho, Daniel, Janet Gao, and Pengfei Ma. 2023. {``Loan Spreads and
+Credit Cycles: The Role of Lenders' Personal Economic Experiences.''}
+\emph{Journal of Financial Economics} 148 (2): 118--49.
+
+\bibitem[\citeproctext]{ref-fu2021credit}
+Fu, Xiaoqing, Matthew C Li, and Philip Molyneux. 2021. {``Credit Default
+Swap Spreads: Market Conditions, Firm Performance, and the Impact of the
+2007--2009 Financial Crisis.''} \emph{Empirical Economics} 60 (5):
+2203--25.
+
+\bibitem[\citeproctext]{ref-kaviani2020policy}
+Kaviani, Mahsa S, Lawrence Kryzanowski, Hosein Maleki, and Pavel Savor.
+2020. {``Policy Uncertainty and Corporate Credit Spreads.''}
+\emph{Journal of Financial Economics} 138 (3): 838--65.
+
+\bibitem[\citeproctext]{ref-wang2023liquidity}
+Wang, Haiyang. 2023. {``Liquidity of Corporate Bonds and Credit
+Spread.''} \emph{Finance Research Letters} 55: 103941.
 
 \end{CSLReferences}
 

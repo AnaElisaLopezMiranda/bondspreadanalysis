@@ -88,7 +88,7 @@ The research question this paper will seek to answer is what are the micro-deter
 
 # Literature Review {#sec-lit}
 
-In 2020, Fu et. al employed a multi-factor analysis from both a firm-specific and market-specific perspective to examine the determinants of credit spreads in the USA, the UK, and Japan between 2005 and 2012. Their results indicated that the degree of firm leverage has a siginificant influence on spreads. They mention re-testing the influence of leverage on spreads,  "as done in earlier work"
+In 2020, Fu et. al employed a multi-factor analysis from both a firm-specific and market-specific perspective to examine the determinants of credit spreads in the USA, the UK, and Japan between 2005 and 2012. Their results indicated that the degree of firm leverage has a siginificant influence on spreads. They mention re-testing the influence of leverage on spreads,  "as done in earlier work of Collin-Dufresne e"
 
 Total Debt to Equity + Total Debt to Total Capital @fu2021credit
 "we assess the existence of a firm leverage effect"
