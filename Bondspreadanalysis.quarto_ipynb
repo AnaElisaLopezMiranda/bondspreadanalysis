@@ -1,0 +1,64 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"ECO375\"\n",
+        "author: \n",
+        "  - name: Ana Elisa Lopez-Miranda and Nipun Jaiswal\n",
+        "jupyter:\n",
+        "  kernelspec:\n",
+        "    display_name: Stata\n",
+        "    language: Stata\n",
+        "    name: stata\n",
+        "date: today\n",
+        "date-format: long\n",
+        "format: pdf\n",
+        "execute:\n",
+        "    echo: false\n",
+        "number-sections: true\n",
+        "bibliography: references.bib\n",
+        "fig-cap-location: bottom\n",
+        "---\n",
+        "\n",
+        "# Introduction {#sec-intro} \n",
+        "## Description of variables\n",
+        "## Statement of hypothesis/research question\n",
+        "\n",
+        "# Literature Review {#sec-lit}\n",
+        "\n",
+        "# Descriptive {#sec-des}\n",
+        "## Tables\n",
+        "## Plots\n",
+        "## Summary of key variables\n",
+        "\n",
+        "# Methodology {#sec-met}\n",
+        "## Clear statement of the model and its assumptions\n",
+        "## Specification tests\n",
+        "## Robustness considerations \n",
+        "\n",
+        "# Hypothesis Testing {#sec-hyp}\n",
+        "## Choise of appropriate test\n",
+        "\n",
+        "testing hi this is normal text.\n",
+        "\n",
+        "\n",
+        "# Results {#sec-res}\n",
+        "## Correct interpretation of results\n",
+        "## Economic intuition provided"
+      ],
+      "id": "24568fe1"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Stata",
+      "language": "Stata",
+      "name": "stata"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

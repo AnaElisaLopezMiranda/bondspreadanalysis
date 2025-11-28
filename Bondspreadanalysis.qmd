@@ -1,8 +1,10 @@
 ---
-title: "ECO375"
+title: "On The Micro-Determinants of Credit Spreads"
+subtitle: "ECO375: Empirical Project"
 author: 
   - name: Ana Elisa Lopez-Miranda and Nipun Jaiswal
-date: today
+  - name: (1008726826) and (1008819879)
+date: November 27, 2025
 date-format: long
 format: pdf
 execute:
@@ -11,12 +13,43 @@ number-sections: true
 bibliography: references.bib
 fig-cap-location: bottom
 ---
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Introduction {#sec-intro} 
+
+difference in percentages: basis points
+
+
 ## Description of variables
+do now without stata
 ## Statement of hypothesis/research question
 
+which factors are important 
+
 # Literature Review {#sec-lit}
+do now
+"For banks, credit spread can be an indicator of the profitability or risk premium related to a lender providing a loan to an individual borrower. The credit spread accounts for the maturity, liquidity, credit risk, and creditworthiness of borrowers. In this study, credit spread is defined as the difference between the loan rate and risk-free rate." [@u2021investigating]
 
 # Descriptive {#sec-des}
 ## Tables
