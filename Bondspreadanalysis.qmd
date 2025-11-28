@@ -1,5 +1,5 @@
 ---
-title: "On The Micro-Determinants of Credit Spreads"
+title: "The Micro-Determinants of Credit Spreads"
 subtitle: "ECO375: Empirical Project"
 author: 
   - name: Nipun Jaiswal and Ana Elisa Lopez-Miranda
@@ -20,61 +20,9 @@ fig-cap-location: bottom
 
 # Introduction {#sec-intro} 
 
-Finding the micro-determinants for credit bonds is useful for finding what affects yields over time. 
-
-Yield is described as the difference in 
+Finding the micro-determinants for credit bonds is useful for finding what affects yields over time. The yield that investors require to purchase a firm's bond is  the spread over the yield  provided by a comparable government bond. Micro-determinants are variables taht are related to the probability of default and the liquidity associated with a specific bond issue. This project seaks to assess the importance of firm specific factors in determining the spread for its bonds. The data used covered two points in time: 2022 and 2024. The model is a cross-sectional problem focusing on the changes in spread from 2022 to 2024. Fixed effects were not included as these were not vary across bonds. 
 
 This paper is structured as follows: @sec-lit is the literature review situating the research question, @sec-des contains the preliminary analyses, @sec-met contains the methodology, @sec-res contains the results, and @sec-hyp has the hypothesis testing. 
-
-# Firm value and capital structure ratios
-
-Enterprise value to sales measures how expensive a company is relative to its revenue. Thus, a high ratio means the market expects high growth (or the company is overvalued). 
-Thus, a high enterprise value to sales means lower perceived risk and lower spreads.
-
-PPE is actual long-term assets (machines, buildings, equipment). Thus, a high enterprise value to PPE means the firm is growth-oriente, but that also means it is riskier and higher spreads. 
-
-High P/S -> confidence -> lower spreads
-
-Book Value = Assets - Liabilities 
-P/B <1 -> undervaluation -> financial distress -> higher spreads
-
-Dividend yield -> higher MAY indicate risk
-
-High RATE -> more efficient -> lower spreads
-
-# profitability and operational efficiency 
-
-operating margin = earnings before interest and taxes/revenue 
-high margin -> lower default risk (firm is efficient) -> lower spreads
-
-High total capital expenses to total assets -> lower spreads or less cash :\
-
-low book value per share -> maybe bankrupt
-
-High asset turnover -> efficient -> lower spreads
-
-# Liquidity and Cash flow ratios
-
-current ratio = current assets (cash + receivables + inventory)/ current liabilities (obligations due)
-low current ratio -> liquidity risk -> higher spreads
-
-Cash dividend coverage ratio = operating cash flow/cash dividends paid
-lower coverage -> weak cash flow -> higher spreads
-
-# Leverage and Capital Structure
-
-high total debt/shareholder equity -> in debt -> higher spreads
-
-high total debt/(total debt + equity) -> high reliance on debt -> high spreads
-
-# Bond specific
-
-Higher amount outstanding -> lower spreads (more liquid?)
-smaller amount outstanding -> higher spreads
-
-years to maturity -> more interest rate and credit risk -> higher spread (risk premium) 
-
-low couponds -> high price sensitity? MAYBE. Higher does not not imply higher here
 
 
 difference in percentages: basis points
@@ -89,23 +37,48 @@ The variables are as follows
 | Issuer  | Name of the company that issued the bond |
 | Spread | The difference between the bond's yield and the yield on a government bond of the same maturity. Measured in bps |
 | Ticker Parent  | Identifier for the parent company |
-| **Enterprise Value to Sales** | Measures how expensive a company is relative to its revenue |
+| Enterprise Value to Sales | Measures how expensive a company is relative to its revenue |
 | Enterprise Value to PPE | Measures valuation relative to tangible assets |
-| **Price to Sales** | How much investors pay for $1 of revenue |
-| **Price to Book Value** | Measures how expensive the firm is relative to accounting equity |
+| Price to Sales | How much investors pay for $1 of revenue |
+| Price to Book Value | Measures how expensive the firm is relative to accounting equity |
 | Dividend Yield | Return shareholders receive from dividends |
-| **Return on Average Total Equity** | How efficient the firm is with investments |
-| **Operating Margin** | Core profibility measure |
+| Return on Average Total Equity | How efficient the firm is with investments |
+| Operating Margin | Core profibility measure |
 | Total Capital Expenses to Total Assets | How much firm invests in long-term assets |
 | Book Value per Share | Accounting value per share |
-| **Asset Turnover** | Measures how well assets generate revenue |
-| **Current Ratio** | Measures short-term liquidity |
-| **Cash Dividend Coverage Ratio** | Measures if firm can pay dividends purely from operations |
-| **Total Debt to Equity** | Measures financial leverage |
-| **Total Debt to Total Capital** | Shows how much of capital is from debt |
+| Asset Turnover | Measures how well assets generate revenue |
+| Current Ratio | Measures short-term liquidity |
+| Cash Dividend Coverage Ratio | Measures if firm can pay dividends purely from operations |
+| Total Debt to Equity | Measures financial leverage |
+| Total Debt to Total Capital | Shows how much of capital is from debt |
 | Amount Outstanding | Size of the bond |
 | Years to Maturity | Number of years until the bond pays back its principal |
 | Coupon | Annual payments made to bond holders |
+
+Enterprise value to sales measures how expensive a company is relative to its revenue. Thus, a high ratio means the market expects high growth (or the company is overvalued). Thus, a high enterprise value to sales means lower perceived risk and lower spreads.
+
+PPE is tangible long-term assets. Thus, a high enterprise value to PPE means the firm is growth-oriented, but that also means has more risk and higher spreads. 
+
+A high Price to Sales signifies higher confidence in the firm by the general public which indicates lower spreads. 
+
+Price to Book Value is how the firm is valued by the general public. A lower ratio indicates undervaluation which produces financial distress and higher spreads. 
+
+Divident yield is how much bond holders are receiving from the dividents. A higher ration may indicate higher risk.
+
+A higher Return on Average total equity indicates the firm is more efficient which means lower spreads. 
+
+The operating margin shows how much earnings are received before interest and taxes. A higher margin indicates the firm has a lower risk of going default which means lower spreads. 
+
+A high total capital expenses to total assets could indicate either lower spreads or a lack of liquidy.
+
+A low book value per share may indicate the firm is close to going default and thus have a higher spread. 
+A high asset turnover indicates the efficiency which implies lower spreads
+
+A low current ratio indicates liquidity risk which implies higher spreads.
+
+A low cash dividend coverage ratio indicates weak cash flow which implies higher spreads
+
+A high total debt to equity means the firm has a high reliance on debt which implies higher spreads
 
 
 ## Statement of hypothesis/research question
@@ -133,7 +106,6 @@ amount outstanding (loan amount) “I define the net notional amount of credit r
 NOf,t is analogous to the face value of debt outstanding in bond markets—it captures the net amount of protection sold…”
 Years to maturity (loan maturity) “…a firm is defined as a combination of the underlying firm (e.g. Ford) and a maturity bucket (e.g. 0-2 years)… The maturity buckets I consider are (in years): 0-2, 2-4, 4-6, 6-8, 8-10, and 10+.”
 
-[@collin2001determinants] added total debt to equity and enterprice valuue to sales.
 
 # Descriptive {#sec-des}
 ## Plots
