@@ -20,12 +20,11 @@ fig-cap-location: bottom
 
 # Introduction {#sec-intro} 
 
-Finding the micro-determinants for credit bonds is useful for finding what affects yields over time. The yield that investors require to purchase a firm's bond is  the spread over the yield  provided by a comparable government bond. Micro-determinants are variables taht are related to the probability of default and the liquidity associated with a specific bond issue. This project seaks to assess the importance of firm specific factors in determining the spread for its bonds. The data used covered two points in time: 2022 and 2024. The model is a cross-sectional problem focusing on the changes in spread from 2022 to 2024. Fixed effects were not included as these were not vary across bonds. 
+The yield that investors require to purchase a firm's bond is  the spread over the yield  provided by a comparable government bond. Finding the micro-determinants for credit bonds is useful for finding what affects yields over time. Micro-determinants are variables that are related to the probability of default and the liquidity associated with a specific bond issue. This project seeks to assess the importance of firm specific factors in determining the spread for its bonds. The data used covered two points in time: 2022 and 2024. The model is a cross-sectional problem focusing on the changes in spread from 2022 to 2024. Fixed effects were not included as these were not vary across bonds. 
+
+Economic intuition indicates that Total Debt to Equity which represents leverage, Price to Book Value which measures how expensive a firm is relative to accounting measure, Current Ratio which indicates liquidiy, and Return on Average Total Equity which indicates firm efficiency are key determinants in finding a a bond's spread.
 
 This paper is structured as follows: @sec-lit is the literature review situating the research question, @sec-des contains the preliminary analyses, @sec-met contains the methodology, @sec-res contains the results, and @sec-hyp has the hypothesis testing. 
-
-
-difference in percentages: basis points
 
 
 ## Description of variables
@@ -111,11 +110,11 @@ Spread is numeric with a range from [-196.8, 395.8]. It had a mean of -14.6 and 
 
 PricetoBook Value is numeric with a range from [-10.3, 7.1]. It had a mean of 0.214 and a standard deviation of 1.17. It had skewness of 0.106.
 
-Return on Average total equity was numeric with a range [-90.96, 135.03]. It had a mean of -0.47 and a standard deviation of 19.466. It had a skweness of 1.236.
+Return on Average total equity was numeric with a range [-90.96, 135.03]. It had a mean of -0.47 and a standard deviation of 19.466. It had a skweness of 1.236. We squared Return on Average Total equity in order to have only positive results
 
 Current Ratio is numeric with a range from [-1.47, 3.27]. It had a mean of -0.14 and a standard deviation of 0.395. It had a skewness of 2.86.
 
-Total Debt to Equity is numeric with range from [-80.36, 452.69]. It had a mean of 30.07 and a standard deviation of 39.65. It had a skewness of 39.65. 
+Total Debt to Equity is numeric with range from [-80.36, 452.69]. It had a mean of 30.07 and a standard deviation of 39.65. It had a skewness of 39.65. We  squared Total Debt to Equity in order to have only positive results.
 
 # Methodology {#sec-met}
 ## Clear statement of the model and its assumptions
