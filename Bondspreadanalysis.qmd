@@ -2,7 +2,7 @@
 title: "On The Micro-Determinants of Credit Spreads"
 subtitle: "ECO375: Empirical Project"
 author: 
-  - name: Ana Elisa Lopez-Miranda and Nipun Jaiswal
+  - name: Nipun Jaiswal and Ana Elisa Lopez-Miranda
   - name: (1008726826) and (1008819879)
 date: November 27, 2025
 date-format: long
@@ -16,6 +16,10 @@ fig-cap-location: bottom
 \newpage
 
 
+
+micro determinants of the spread of the change over time
+
+leverage, volatility, liquidity, firm size, and corporate governance play a significant role in explaining credit spread variations across firms and over time.
 
 
 
@@ -38,12 +42,121 @@ fig-cap-location: bottom
 
 # Introduction {#sec-intro} 
 
+The variables are as follows
+
+| Variable | Description |
+|---------|-------------|
+| Issuer  | Name of the company that issued the bond |
+| Spread | The difference between the bond's yield and the yield on a government bond of the same maturity. Measured in bps |
+| Ticker Parent  | Identifier for the parent company |
+| Enterprise Value to Sales | Measures how expensive a company is relative to its revenue |
+| Enterprise Value to PPE | Measures valuation relative to tangible assets |
+| Price to Sales | How much investors pay for $1 of revenue |
+| Price to Book Value | Measures how expensive the firm is relative to accounting equity |
+| Dividend Yield | Return shareholders receive from dividends |
+| Return on Average Total Equity | How efficient the firm is with investments |
+| Operating Margin | Core profibility measure |
+| Total Capital Expenses to Total Assets | How much firm invests in long-term assets |
+| Book Value per Share | Accounting value per share |
+| Asset Turnover | Measures how well assets generate revenue |
+| Current Ratio | Measures short-term liquidity |
+| Cash Dividend Coverage Ratio | Measures if firm can pay dividends purely from operations |
+| Total Debt to Equity | Measures financial leverage |
+| Total Debt to Total Capital | Shows how much of capital is from debt |
+| Amount Outstanding | Size of the bond |
+| Years to Maturity | Number of years until the bond pays back its principal |
+| Coupon | Annual payments made to bond holders |
+
+Higher spread = higher perceived risk
+
+# Firm value and capital structure ratios
+
+Enterprise Value = Market Cap + Total Debt - Cash
+EVtoSales measures how expensive a company is relative to its revnue 
+High EV/Sales -> market expects high growth OR company is overvalued
+High EV -> lower PERCEIVED risk -> lower spreads
+
+PPE is actual long-term assets (machines, buildings, equipment)
+High EV/PPE -> growth-oriented
+High EV/PPE -> riskier -> higher spreads
+
+High P/S -> confidence -> lower spreads
+
+Book Value = Assets - Liabilities 
+P/B <1 -> undervaluation -> financial distress -> higher spreads
+
+Dividend yield -> higher MAY indicate risk
+
+High RATE -> more efficient -> lower spreads
+
+# profitability and operational efficiency 
+
+operating margin = earnings before interest and taxes/revenue 
+high margin -> lower default risk (firm is efficient) -> lower spreads
+
+High total capital expenses to total assets -> lower spreads or less cash :\
+
+low book value per share -> maybe bankrupt
+
+High asset turnover -> efficient -> lower spreads
+
+# Liquidity and Cash flow ratios
+
+current ratio = current assets (cash + receivables + inventory)/ current liabilities (obligations due)
+low current ratio -> liquidity risk -> higher spreads
+
+Cash dividend coverage ratio = operating cash flow/cash dividends paid
+lower coverage -> weak cash flow -> higher spreads
+
+# Leverage and Capital Structure
+
+high total debt/shareholder equity -> in debt -> higher spreads
+
+high total debt/(total debt + equity) -> high reliance on debt -> high spreads
+
+# Bond specific
+
+Higher amount outstanding -> lower spreads (more liquid?)
+smaller amount outstanding -> higher spreads
+
+years to maturity -> more interest rate and credit risk -> higher spread (risk premium) 
+
+low couponds -> high price sensitity? MAYBE. Higher does not not imply higher here
+
+
+
+
+SLR assumptions:
+linearity in parameters
+Random sampling
+no perfect colllnearity
+Zero conditional mean
+Homoskedasticity
+(1-4) unbiased ness 
+add 5 to get BLUE
+6 is normality
+
+
+
 difference in percentages: basis points
 
 
 ## Description of variables
 do now without stata
+
+
+The variables in data are
+Issuer: Name of the bond issuer
+Ticker Parent: The parent of the issuer
+Enterprice Value to Sales: Market Capitalization+total debt - cash & cash equivalents over revenue
+Enterprise Value to PPE: Market capitalization +Total debt - cash & cash divided by Net Property, Plant, and Equipment where PPE measures tangible, long-term fixed asses (land, buildings, machinery, equipment), usually net of accumulated depreciation. 
+Price
+
+
+[@collin2001determinants] added total debt to equity and enterprice valuue to sales.
 ## Statement of hypothesis/research question
+
+
 
 which factors are important 
 
