@@ -17,55 +17,15 @@ fig-cap-location: bottom
 
 
 
-micro determinants of the spread of the change over time
-
-leverage, volatility, liquidity, firm size, and corporate governance play a significant role in explaining credit spread variations across firms and over time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Introduction {#sec-intro} 
 
-The variables are as follows
 
-| Variable | Description |
-|---------|-------------|
-| Issuer  | Name of the company that issued the bond |
-| Spread | The difference between the bond's yield and the yield on a government bond of the same maturity. Measured in bps |
-| Ticker Parent  | Identifier for the parent company |
-| Enterprise Value to Sales | Measures how expensive a company is relative to its revenue |
-| Enterprise Value to PPE | Measures valuation relative to tangible assets |
-| Price to Sales | How much investors pay for $1 of revenue |
-| Price to Book Value | Measures how expensive the firm is relative to accounting equity |
-| Dividend Yield | Return shareholders receive from dividends |
-| Return on Average Total Equity | How efficient the firm is with investments |
-| Operating Margin | Core profibility measure |
-| Total Capital Expenses to Total Assets | How much firm invests in long-term assets |
-| Book Value per Share | Accounting value per share |
-| Asset Turnover | Measures how well assets generate revenue |
-| Current Ratio | Measures short-term liquidity |
-| Cash Dividend Coverage Ratio | Measures if firm can pay dividends purely from operations |
-| Total Debt to Equity | Measures financial leverage |
-| Total Debt to Total Capital | Shows how much of capital is from debt |
-| Amount Outstanding | Size of the bond |
-| Years to Maturity | Number of years until the bond pays back its principal |
-| Coupon | Annual payments made to bond holders |
+
+
+
+This paper is structured as follows: @sec-lit is the literature review situating the research question, @sec-des contains the preliminary analyses, @sec-met contains the methodology, @sec-res contains the results, and @sec-hyp has the hypothesis testing. 
+
 
 Higher spread = higher perceived risk
 
@@ -125,7 +85,6 @@ low couponds -> high price sensitity? MAYBE. Higher does not not imply higher he
 
 
 
-
 SLR assumptions:
 linearity in parameters
 Random sampling
@@ -142,31 +101,90 @@ difference in percentages: basis points
 
 
 ## Description of variables
-do now without stata
+
+The variables are as follows
+
+| Variable | Description |
+|---------|-------------|
+| Issuer  | Name of the company that issued the bond |
+| Spread | The difference between the bond's yield and the yield on a government bond of the same maturity. Measured in bps |
+| Ticker Parent  | Identifier for the parent company |
+| **Enterprise Value to Sales** | Measures how expensive a company is relative to its revenue |
+| Enterprise Value to PPE | Measures valuation relative to tangible assets |
+| **Price to Sales** | How much investors pay for $1 of revenue |
+| **Price to Book Value** | Measures how expensive the firm is relative to accounting equity |
+| Dividend Yield | Return shareholders receive from dividends |
+| **Return on Average Total Equity** | How efficient the firm is with investments |
+| **Operating Margin** | Core profibility measure |
+| Total Capital Expenses to Total Assets | How much firm invests in long-term assets |
+| Book Value per Share | Accounting value per share |
+| **Asset Turnover** | Measures how well assets generate revenue |
+| **Current Ratio** | Measures short-term liquidity |
+| **Cash Dividend Coverage Ratio** | Measures if firm can pay dividends purely from operations |
+| **Total Debt to Equity** | Measures financial leverage |
+| **Total Debt to Total Capital** | Shows how much of capital is from debt |
+| Amount Outstanding | Size of the bond |
+| Years to Maturity | Number of years until the bond pays back its principal |
+| Coupon | Annual payments made to bond holders |
+
+Spread is numeric with a range from [-196.8, 395.8]. It had a mean of -14.6 and a standard deviation of 57.6. It had skweness of 1.017
+
+PricetoBook Value is numeric with a range from [-10.3, 7.1]. It had a mean of 0.214 and a standard deviation of 1.17. It had skewness of 0.106.
+
+Return on Average total equity was numeric with a range [-90.96, 135.03]. It had a mean of -0.47 and a standard deviation of 19.466. It had a skweness of 1.236.
+
+Current Ratio is numeric with a range from [-1.47, 3.27]. It had a mean of -0.14 and a standard deviation of 0.395. It had a skewness of 2.86.
 
 
-The variables in data are
-Issuer: Name of the bond issuer
-Ticker Parent: The parent of the issuer
-Enterprice Value to Sales: Market Capitalization+total debt - cash & cash equivalents over revenue
-Enterprise Value to PPE: Market capitalization +Total debt - cash & cash divided by Net Property, Plant, and Equipment where PPE measures tangible, long-term fixed asses (land, buildings, machinery, equipment), usually net of accumulated depreciation. 
-Price
-
-
-[@collin2001determinants] added total debt to equity and enterprice valuue to sales.
 ## Statement of hypothesis/research question
 
+The research question this paper will seek to answer is what are the micro determinants of credit spread. We propose the following model 
 
+$y= \beta_{0}+\beta_{1}x_1+\beta_{2}x_2$
 
-which factors are important 
+Where $y$ is the spread of bonds, $x_1$ is ...
+
 
 # Literature Review {#sec-lit}
 do now
 "For banks, credit spread can be an indicator of the profitability or risk premium related to a lender providing a loan to an individual borrower. The credit spread accounts for the maturity, liquidity, credit risk, and creditworthiness of borrowers. In this study, credit spread is defined as the difference between the loan rate and risk-free rate." [@u2021investigating]
 
+@collin2001determinants:
+book value (more leverage -> higher spreads)
+
+"Hence, it is clear that credit spreads are expected to increase with leverage. Likewise, credit spreads should be a decreasing function of the firm's return on equity, all else equal." @collin2001determinants
+
+"Implied volatility smiles in observed option prices suggest that markets account for the probability of large negative jumps in firm value. Thus, increases in either the probability or the magnitude of a negative jump should increase credit spreads."@collin2001determinants
+
+
+Total Debt to Equity + Total Debt to Total Capital @fu2021credit
+"we assess the existence of a firm leverage effect"
+"firm leverage appears to have a significant influence"
+
+@wang2023liquidity
+ROE “Return on net assets… the higher the ROE, the better the operating conditions and the ability to service debt.”
+higher -> lower spreads
+Current Ratio "“The higher the current ratio, the better the ability to service debt…the smaller the credit spread.”"
+
+@kaviani2020policy
+Operating Margin "“…operating income-to-sales ratio…"
+
+@carvalho2023loan
+Price to book value (Market-to-book) "“Borrower-level controls include Equity Volatility, Size, Firm Age, Profitability, Tangibility, Market-to-Book, Leverage, Rated.”"
+amount outstanding (loan amount) “I define the net notional amount of credit risk outstanding for a given firm as:
+NOf,t is analogous to the face value of debt outstanding in bond markets—it captures the net amount of protection sold…”
+Years to maturity (loan maturity) “…a firm is defined as a combination of the underlying firm (e.g. Ford) and a maturity bucket (e.g. 0-2 years)… The maturity buckets I consider are (in years): 0-2, 2-4, 4-6, 6-8, 8-10, and 10+.”
+
+[@collin2001determinants] added total debt to equity and enterprice valuue to sales.
+
 # Descriptive {#sec-des}
 ## Tables
 ## Plots
+
+![](spreadvscurrentratio.png)
+![](spreadvspricetobookvalue.png)
+![](spreadvsretrnavgtotalequitycubed.png)
+
 ## Summary of key variables
 
 # Methodology {#sec-met}
@@ -176,8 +194,6 @@ do now
 
 # Hypothesis Testing {#sec-hyp}
 ## Choise of appropriate test
-
-testing hi this is normal text.
 
 
 # Results {#sec-res}
