@@ -30,7 +30,7 @@ difference in percentages: basis points
 
 ## Description of variables
 
-The variables are as follows
+There are 861 observations encompassing 34 categories. The variables are as follows
 
 | Variable | Description |
 |---------|-------------|
@@ -88,25 +88,11 @@ The research question this paper will seek to answer is what are the micro-deter
 
 # Literature Review {#sec-lit}
 
-In 2020, Fu et. al employed a multi-factor analysis from both a firm-specific and market-specific perspective to examine the determinants of credit spreads in the USA, the UK, and Japan between 2005 and 2012. Their results indicated that the degree of firm leverage has a siginificant influence on spreads. They mention re-testing the influence of leverage on spreads,  "as done in earlier work of Collin-Dufresne e"
+In "Credit Default Swap Spreads", Fu et. al employed a multi-factor analysis from both a firm-specific and market-specific perspective to examine the determinants of credit spreads in the USA, the UK, and Japan between 2005 and 2012. Their results indicated that the degree of firm leverage has a siginificant influence on spreads. They mention re-testing the influence of leverage on spreads as done in Collin-Dufresne et al. in 2001 @collin2001determinants and Aunon-Nerin et al. in 2002 @aunon2002exploring. From the data used, leverage is seen in Total Debt to Equity. 
 
-Total Debt to Equity + Total Debt to Total Capital @fu2021credit
-"we assess the existence of a firm leverage effect"
-"firm leverage appears to have a significant influence"
+In "Liquidity of Corporate Bonds and Credit Spread", Wang examined corporate bond liquidity's impact on credit spreads for listed companies in China. He found that the better the liquidity of listed corporate bonds, the smaller the credit spread. He found that "the higher the ROE, the higher the current ratio, the better the ability to service debt...the smaller the credit spread" [@wang2023liquidity]. From the data used, return on net assets can be seen as Return on Average Total Equity, and Current ratio is directly used in the data. 
 
-@wang2023liquidity
-ROE “Return on net assets… the higher the ROE, the better the operating conditions and the ability to service debt.”
-higher -> lower spreads
-Current Ratio "“The higher the current ratio, the better the ability to service debt…the smaller the credit spread.”"
-
-@kaviani2020policy
-Operating Margin "“…operating income-to-sales ratio…"
-
-@carvalho2023loan
-Price to book value (Market-to-book) "“Borrower-level controls include Equity Volatility, Size, Firm Age, Profitability, Tangibility, Market-to-Book, Leverage, Rated.”"
-amount outstanding (loan amount) “I define the net notional amount of credit risk outstanding for a given firm as:
-NOf,t is analogous to the face value of debt outstanding in bond markets—it captures the net amount of protection sold…”
-Years to maturity (loan maturity) “…a firm is defined as a combination of the underlying firm (e.g. Ford) and a maturity bucket (e.g. 0-2 years)… The maturity buckets I consider are (in years): 0-2, 2-4, 4-6, 6-8, 8-10, and 10+.”
+In "Loan Spreads and Credit Cycles", Carvalho et. al find evidence that lender optimism can lead to excessive fluctuations in credit spreads. Carvalho means "Equity Volatility, Size, Firm Age, Profibility, Tangibility, M/B (market-to-book), Leverage..." as determinants for bond spreads [@carvalho2023loan]. From the data used, Price to Book Value corresponds with Market-to-book
 
 
 # Descriptive {#sec-des}
@@ -135,7 +121,7 @@ Total Debt to Equity is numeric with range from [-80.36, 452.69]. It had a mean 
 ## Clear statement of the model and its assumptions
 
 $$
-\Delta y_i= \beta_{0}+\beta_{1}log(x_{i1})+\beta_{2}x_{i2} + \beta_{3}log(x_{i3})+\beta_{4}x_{i4}
+\Delta y_i= \beta_{0}+2\beta_{1}log(|x_{i1}|)+\beta_{2}x_{i2} + 2\beta_{3}log(|x_{i3}|)+\beta_{4}x_{i4}^{3}
 $$
 
 Where $\Delta y$ is the difference in the spread of bonds from 2022 to 2024, 
@@ -156,7 +142,7 @@ This is an assumption about the data given. It is randomly sampled.
 **No Perfect Collinearity**
 
 We ran correlation between all the variables and got the following table. Since none of the columns are a repeat, there is no perfect collinearity.
-![](collinearity.png.png){width=50%, fig-align="center"}
+![](collinearity.png){width=50%, fig-align="center"}
 
 ![](collinearityy.png){width=50%, fig-align="center"}
 **Zero Conditional Mean**
@@ -200,3 +186,5 @@ We chose to do a joint f test to see whether any of the parameters should be 0. 
 # Results {#sec-res}
 ## Correct interpretation of results
 ## Economic intuition provided
+
+# References {#sec-ref}

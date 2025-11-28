@@ -1,1 +1,8 @@
 [@collin2001determinants] added total debt to equity and enterprice valuue to sales.
+
+@kaviani2020policy
+Operating Margin "“…operating income-to-sales ratio…"
+
+amount outstanding (loan amount) “I define the net notional amount of credit risk outstanding for a given firm as:
+NOf,t is analogous to the face value of debt outstanding in bond markets—it captures the net amount of protection sold…”
+Years to maturity (loan maturity) “…a firm is defined as a combination of the underlying firm (e.g. Ford) and a maturity bucket (e.g. 0-2 years)… The maturity buckets I consider are (in years): 0-2, 2-4, 4-6, 6-8, 8-10, and 10+.”
